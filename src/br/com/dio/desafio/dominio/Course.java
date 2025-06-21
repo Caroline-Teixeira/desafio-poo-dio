@@ -1,10 +1,8 @@
 package br.com.dio.desafio.dominio;
 
-public class Course {
+public class Course extends Content {
 
     // Atributos
-    private String title;
-    private String description;
     private int workload;
 
     // Construtor
@@ -15,24 +13,14 @@ public class Course {
     }
 
     // Getters e Setters
-    public String getTitle() {
-        return title;
-    }
-    public void setTitle(String title) {
-        this.title = title;
-    }   
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
     public int getWorkload() {
         return workload;
     }
     public void setWorkload(int workload) {
         this.workload = workload;
     }
+
+
 
     // Método toString
     @Override
@@ -44,11 +32,13 @@ public class Course {
                 '}';
     }
 
-
-    // Método para calcular XP
-    public int calculateXP() {
-        return 10 * workload; // Exemplo de cálculo de XP
+    @Override
+    public double calculateXP() {
+        return DEFAULT_XP * workload ;  // A carga horária influencia no cálculo de XP
     }
+
+
+    
 
    
 }

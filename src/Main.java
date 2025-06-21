@@ -18,7 +18,7 @@ public class Main {
       6
     );
 
-    Mentoring mentoring1 = new Mentoring("Jave", "Aprendendo tipos primitivos", LocalDate.now());
+    Mentoring mentoring1 = new Mentoring("Java", "Aprendendo tipos primitivos", LocalDate.now());
 
     System.out.println(course1);
     System.out.println(course2);
