@@ -1,7 +1,6 @@
 package br.com.dio.desafio.dominio;
 
+public abstract class Content {
 
-
-public class Bootcamp {
-   
+    
 }
