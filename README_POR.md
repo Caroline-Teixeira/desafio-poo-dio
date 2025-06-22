@@ -2,7 +2,7 @@
 
 📜 **Conclusão do Projeto e Melhorias Implementadas** 📜
 
-Bem-vindos ao resultado do desafio **APRENDENDO NA PRÁTICA O PARADIGMA DE ORIENTAÇÃO A OBJETOS**, promivido pela plataforma **Digital Innovation One** 💙. Este projeto teve como objetivo aplicar os pilares fundamentais da Programação Orientada a Objetos (POO): **Abstração**, **Encapsulamento**, **Herança** e **Polimorfismo**. Abaixo, detalho as melhorias realizadas no código original e o progresso alcançado.
+Bem-vindos ao resultado do desafio **APRENDENDO NA PRÁTICA O PARADIGMA DE ORIENTAÇÃO A OBJETOS**, promovido pela plataforma **Digital Innovation One** 💙. Este projeto teve como objetivo aplicar os pilares fundamentais da Programação Orientada a Objetos (POO): **Abstração**, **Encapsulamento**, **Herança** e **Polimorfismo**. Abaixo, detalho as melhorias realizadas no código original e o progresso alcançado.
 
 ---
 
