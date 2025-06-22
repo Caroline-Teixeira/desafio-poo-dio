@@ -2,6 +2,7 @@ package br.com.dio.desafio.dominio;
 
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public class Dev {
@@ -40,15 +41,29 @@ public class Dev {
 
 
     // Método para inscrever-se em bootcamp
-    public void subscribeBootcamp(Bootcamp bootcamp){}
+    public void subscribeBootcamp(Bootcamp bootcamp){
+        this.subscribedContents.addAll(bootcamp.getContents());
+        bootcamp.getSubscribedDevs().add(this); // Adiciona o Dev ao bootcamp
+    }
 
 
     // Método para progredir no bootcamp
-    public void progress() {}
+    public void progress() {
+       Optional<Content> content =  this.subscribedContents.stream().findFirst();
+       if(content.isPresent()) {
+           this.completedContents.add(content.get());  // Adiciona o conteúdo concluído
+           this.subscribedContents.remove(content.get()); // Remove o conteúdo da lista de inscritos
+       } else {
+           System.err.println("Você não está inscrito em nenhum conteúdo.");
+       }
+    }
 
 
     // Método para calcular XP total
-    public void calculateTotalXP() {
+    public double calculateTotalXP() {
+        return this.completedContents.stream()
+                .mapToDouble(content -> content.calculateXP()) // Chama o método calculateXP de cada conteúdo
+                .sum(); // Soma os XP de todos os conteúdos concluídos
     }
 
     // Método equals e hashCode
